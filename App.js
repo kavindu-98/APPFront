@@ -2,8 +2,33 @@ import * as React from 'react';
 import { Button, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { LoginScreen, HomeScreen, WelcomeScreen, Finish, SignUpScreen,AcceptDriver,GetStartScreen,Destination,VehicleDt1Screen, VehicleDt2Screen, DRSignUpScreen, DriverDetails, RoleSelect,OTPScreen, SlScreen,RatingScreen,MyActivity, SetDestiOnMap, NoteToDriver,SelectDriver, PendingDriver} from './screens';
+import { 
+  LoginScreen, 
+  HomeScreen,
+   WelcomeScreen, 
+   Finish, 
+   SignUpScreen,
+   AcceptDriver,
+   GetStartScreen,
+   Destination,
+   VehicleDt1Screen, 
+   DLoginScreen, 
+   RouteDetailsInput, 
+   VehicleDt2Screen, 
+   DRSignUpScreen, 
+   DriverDetails, 
+   RoleSelect,
+   OTPScreen, 
+   DOTPScreen,
+   SlScreen,
+   RatingScreen,
+   MyActivity, 
+   SetDestiOnMap, 
+   NoteToDriver,
+   SelectDriver, 
+   PendingDriver} from './screens';
 import Tabs from "./navigation/tabs";
+import DTabs from "./navigation/Dtabs";
 
 const Stack = createStackNavigator()
 
@@ -40,7 +65,11 @@ const App = () => {
           {/* <Stack.Screen name="DriverDetails" component={DriverDetails} /> */}
           {/* <Stack.Screen name="DRSignUpScreen" component={DRSignUpScreen} /> */}
           {/* <Stack.Screen name="VehicleDt1Screen" component={VehicleDt1Screen} /> */}
-          <Stack.Screen name="VehicleDt2Screen" component={VehicleDt2Screen} />
+          {/* <Stack.Screen name="VehicleDt2Screen" component={VehicleDt2Screen} /> */}
+          {/* <Stack.Screen name="RouteDetailsInput" component={RouteDetailsInput} /> */}
+          {/* <Stack.Screen name="DLogin" component={DLoginScreen} /> */}
+          {/* <Stack.Screen name="DOTP" component={DOTPScreen} /> */}
+          <Stack.Screen name="DHome" component={DTabs} />
           
         
 

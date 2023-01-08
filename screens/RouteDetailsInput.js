@@ -29,7 +29,7 @@ const API_URL = 'http://192.168.1.107:8080//api/users/login';
 
 
 
-const VehicleDt2Screen = ({ navigation }) => {
+const RouteDetailsInput = ({ navigation }) => {
   const [email, setEmail] = useState();
   const [Condition, setCondition] = useState();
   const [Name2, setName2] = useState();
@@ -114,7 +114,7 @@ const VehicleDt2Screen = ({ navigation }) => {
                     /> 
                     
             
-          <Text style={styles.Title}> Vehicle Info</Text>
+          <Text style={styles.Title}>Route Info</Text>
         <View style={styles.button}>
 
         <TextIconButton
@@ -133,7 +133,7 @@ const VehicleDt2Screen = ({ navigation }) => {
                             color: COLORS.red1Font,
                             ...FONTS.h2,
                             alignItems: 'flex-end',
-                            marginLeft: -110,
+                            marginLeft: -130,
                             fontSize: 20
                         }}
                         onPress={() => {navigation.navigate('Login')}}
@@ -157,76 +157,31 @@ const VehicleDt2Screen = ({ navigation }) => {
           <View  style={{ marginTop: SIZES.padding5, margin: SIZES.padding4}}>
                 
                 <View>
-                   <View style={styles.namecontainer}>
-                    <View>
-                        <Text style={styles.inputTitle}>Please Upload vehicle photos</Text>
-                        
-                    </View>
-               
-                     
-                   </View>
+                 
                  
                     <Text style={styles.inputTitle}>ROUTE PERMIT NUMBER</Text>
-                  <TextInput
-                    style={styles.input}
-                    placeholder="Enter your Route Permit Number"
-                    // secureTextEntry
-                    value={email}
-                    onChangeText={text => setEmail(text)}
-                  />
-
-<View style={styles.namecontainer}>
-                      <View>
-                            <Text style={styles.inputTitle}>COUNTRY CODE</Text>
-
-                            <Picker
+                    <Picker
                               selectedValue={selectedItem}
                               style={{
                                 borderWidth: 1,
                                 // backgroundColor:COLORS.transparentBlack,
                                 marginTop:8,
-                                width: "120%"
+                                width: "100%"
                               }}
                               onValueChange={(itemValue, item) =>
                                 setSelectedItem(itemValue)
                               }>
-                              <Picker.Item label="30 Seats" value="30 Seats" />
-                              <Picker.Item label="20 Seats" value="20 Seats" />
-                              <Picker.Item label="10 Seats" value="10 Seats" />
-                              <Picker.Item label="40 Seats" value="40 Seats" />
-                              <Picker.Item label="25 Seats" value="25 Seats" />
-                            
-
-                            </Picker>
-                            
-                        </View>
-                        <View>
-                            <Text style={styles.inputTitle}>CONTACT NO</Text>
-                            <Picker
-                              selectedValue={selectedItem}
-                              style={{
-                                borderWidth: 1,
-                                // backgroundColor:COLORS.transparentBlack,
-                                marginTop:8,
-                                width: "120%",
-                                marginLeft: -40
-                              
-                              }}
-                              onValueChange={(itemValue, item) =>
-                                setSelectedItem(itemValue)
-                              }>
-                              <Picker.Item label="A/C" value="A/C" />
-                              <Picker.Item label=" Non A/C" value=" Non A/C" />
+                              <Picker.Item label="Gampaha - Katunayake" value="Gampaha - Katunayake" />
+                              <Picker.Item label="Negombo - Katunayake" value="Negombo - Katunayake" />
+                              <Picker.Item label="Dehiwala - Katunayake" value="Dehiwala - Katunayake" />
                          
                             
 
                             </Picker>
-                           
-                        </View>
-                      
-                </View>
+
+
                 
-                <Text style={styles.inputTitle}>MORE FEATURES</Text>
+                <Text style={styles.inputTitle}>ADD MAIN STOPS</Text>
                   <TextInput
                     style={styles.input}
                     placeholder="Enter your Route Permit Number"
@@ -239,7 +194,7 @@ const VehicleDt2Screen = ({ navigation }) => {
                 </View>
 
                     <TextIconButton
-                      label="CONTINUE"
+                      label="DONE"
                       customContainerStyle={{
                       width: "100%",
                       height: 55,
@@ -269,7 +224,7 @@ const VehicleDt2Screen = ({ navigation }) => {
   );
 };
 
-export default VehicleDt2Screen;
+export default RouteDetailsInput;
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
@@ -295,7 +250,7 @@ const styles = StyleSheet.create({
     ...FONTS.h2,
     fontWeight: 'bold',
     marginTop: 45,
-    marginLeft: 40
+    marginLeft: 60
     
   },
   namecontainer: {

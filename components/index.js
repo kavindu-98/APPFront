@@ -7,7 +7,7 @@ import IconButton  from "./IconButton";
 import Cards  from "./Cards";
 import PhotoCard  from "./PhotoCard";
 import DriverCard  from "./DriverCard";
-
+import DPhotoCard  from "./DPhotoCard";
 import HeaderBar from "./HeaderBar";
 import MapComponent from "./MapComponent";
 
@@ -22,6 +22,7 @@ export {
     IconButton,
     Cards,
     PhotoCard,
+    DPhotoCard,
     DriverCard,
 
     HeaderBar,

@@ -21,6 +21,11 @@ import Finish from "./Finish";
 import DRSignUpScreen from "./DRSignUpScreen";
 import VehicleDt1Screen from "./VehicleDt1Screen";
 import VehicleDt2Screen from "./VehicleDt2Screen";
+import RouteDetailsInput from "./RouteDetailsInput";
+import DLoginScreen from "./DLoginScreen";
+import DHomeScreen from "./DHomeScreen";
+import DOTPScreen from "./DOTPScreen";
+import DProfileScreen from "./DProfileScreen";
 
 
 
@@ -47,7 +52,13 @@ export {
     Finish,
     DRSignUpScreen,
     VehicleDt1Screen,
-    VehicleDt2Screen
+    VehicleDt2Screen,
+    RouteDetailsInput,
+    DLoginScreen,
+    DOTPScreen,
+    DHomeScreen,
+    DProfileScreen
+
     
 
 }

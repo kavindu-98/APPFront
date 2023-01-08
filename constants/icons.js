@@ -27,6 +27,7 @@ const  Love= require("../assets/icons/Love.png");
 const  map= require("../assets/icons/map.png");
 const  Ok= require("../assets/icons/Ok.png");
 const  Search= require("../assets/icons/Search.png");
+const  VehicleInfo= require("../assets/icons/VehicleInfo.png");
 
 export default {
   
@@ -57,5 +58,6 @@ export default {
     Search,
     add,
     notifications,
-    left_arrow
+    left_arrow,
+    VehicleInfo
 }
