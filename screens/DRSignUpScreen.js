@@ -14,6 +14,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Animated,
+  Image
   
 } from "react-native";
 import { Button, Icon } from "react-native-elements";
@@ -95,7 +96,7 @@ const DRSignUpScreen = ({ navigation }) => {
 
   let AnimatedHeaderValue = new Animated.Value(0);
   const Header_Max_Height = 150;
-  const Header_Min_Height = 40;
+  const Header_Min_Height = 50;
  
   const animateHeaderHeight = AnimatedHeaderValue.interpolate({
     inputRange: [0, Header_Max_Height- Header_Min_Height],
@@ -314,6 +315,37 @@ const DRSignUpScreen = ({ navigation }) => {
                     onChangeText={text => setDid(text)}
                   />
 
+<Text style={styles.inputTitle1}>Please Upload vehicle insurance</Text>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between'
+
+                  
+                }}>
+                  <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+                      <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+
+                </View>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between'
+
+                  
+                }}>
+                  
+                  <Text style={styles.inputTitle2}>Front View</Text>    
+                  <Text style={styles.inputTitle2}>Back View</Text> 
+
+                </View>
+
 
                     <Text style={styles.inputTitle}>PASSWORD</Text>
                   <TextInput
@@ -398,7 +430,26 @@ const styles = StyleSheet.create({
       width: "100%",
       justifyContent: 'space-between'
   },
-
+  profileimage: {
+    width: 130,
+    height: 130,
+    borderRadius: 15,
+    overflow: "hidden",
+  
+  
+  },
+  inputTitle1: {
+    
+    ...FONTS.h3,
+    marginTop: SIZES.padding3
+  },
+  inputTitle2: {
+    
+    ...FONTS.h4,
+    marginTop: -10,
+    marginHorizontal: 30  
+  
+  },
  
  
   textInput: {

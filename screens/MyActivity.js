@@ -20,7 +20,7 @@ import HomeScreen from './HomeScreen';
 
 
 
-const SetDestiOnMap = ({ route}) => {
+const MyActivity = ({ route}) => {
 
 
   const sheetRef = useRef(null);
@@ -230,7 +230,7 @@ function renderMap() {
   )
 }
 
-export default SetDestiOnMap;
+export default MyActivity;
 
 const styles = StyleSheet.create({
   input: {

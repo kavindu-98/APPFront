@@ -10,6 +10,7 @@ import DriverCard  from "./DriverCard";
 import DPhotoCard  from "./DPhotoCard";
 import HeaderBar from "./HeaderBar";
 import MapComponent from "./MapComponent";
+import EmployeeCard from "./EmployeeCard";
 
 
 export {
@@ -24,7 +25,7 @@ export {
     PhotoCard,
     DPhotoCard,
     DriverCard,
-
+    EmployeeCard,
     HeaderBar,
     MapComponent
     

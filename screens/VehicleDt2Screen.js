@@ -14,6 +14,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Animated,
+  Image
   
 } from "react-native";
 import { Button, Icon, Input } from "react-native-elements";
@@ -69,8 +70,8 @@ const VehicleDt2Screen = ({ navigation }) => {
   };
 
   let AnimatedHeaderValue = new Animated.Value(0);
-  const Header_Max_Height = 150;
-  const Header_Min_Height = 40;
+  const Header_Max_Height = 90;
+  const Header_Min_Height = 50;
  
   const animateHeaderHeight = AnimatedHeaderValue.interpolate({
     inputRange: [0, Header_Max_Height- Header_Min_Height],
@@ -157,14 +158,52 @@ const VehicleDt2Screen = ({ navigation }) => {
           <View  style={{ marginTop: SIZES.padding5, margin: SIZES.padding4}}>
                 
                 <View>
-                   <View style={styles.namecontainer}>
-                    <View>
-                        <Text style={styles.inputTitle}>Please Upload vehicle photos</Text>
+                   
+                    
+                    <Text style={styles.inputTitle1}>Please Upload vehicle photos</Text>
+                    <Text style={styles.inputTitle3}>Add minimum 4 photos</Text>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between',
+                  marginHorizontal: 20
+
+                  
+                }}>
+                  <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+                      <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+
+                </View>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between',
+                  marginHorizontal: 20
+
+                  
+                }}>
+                  <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+                      <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+
+                </View>
+              
                         
-                    </View>
+                   
                
                      
-                   </View>
+                
                  
                     <Text style={styles.inputTitle}>ROUTE PERMIT NUMBER</Text>
                   <TextInput
@@ -324,6 +363,26 @@ const styles = StyleSheet.create({
       marginTop: 30
 
   },
+  inputTitle1: {
+    
+    ...FONTS.h3,
+    marginTop: SIZES.padding3
+  },
+  inputTitle2: {
+    
+    ...FONTS.h4,
+    marginTop: -10,
+    marginHorizontal: 30  
+  
+  },
+  inputTitle3: {
+    
+    ...FONTS.h4,
+    marginTop: 5,
+    color: COLORS.red1Font
+    // marginHorizontal: 30  
+  
+  },
 
  
   inputTitle: {
@@ -340,6 +399,14 @@ const styles = StyleSheet.create({
     marginTop: SIZES.padding3,
     textAlign: 'center'
 
+  },
+  profileimage: {
+    width: 130,
+    height: 130,
+    borderRadius: 15,
+    overflow: "hidden",
+  
+  
   },
   input: {
     backgroundColor: COLORS.transparentWhite,

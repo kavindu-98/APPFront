@@ -6,7 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { COLORS, SIZES, FONTS, icons } from '../constants';
 
 // screens
-import {DHomeScreen, PickupLocation, MyActivity,DProfileScreen} from "../screens";
+import {DHomeScreen, DStartLocation, DMyActivity,DProfileScreen} from "../screens";
 
 
 const Tab = createBottomTabNavigator();
@@ -109,7 +109,7 @@ const DTabs = () => {
             />
             <Tab.Screen
                 name="Location"
-                component={PickupLocation}
+                component={DStartLocation}
                 options={{ headerShown: false,tabBarStyle: {display: 'none'}}}
                 
                 // tabBarStyle: {display: 'none'}
@@ -117,7 +117,7 @@ const DTabs = () => {
           
             <Tab.Screen
                 name="MyActivity"
-                component={MyActivity}
+                component={DMyActivity}
                 options={{ headerShown: false}}
             />
             <Tab.Screen

@@ -14,6 +14,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Animated,
+  Image
   
 } from "react-native";
 import { Button, Icon } from "react-native-elements";
@@ -94,8 +95,8 @@ const VehicleDt1Screen = ({ navigation }) => {
   };
 
   let AnimatedHeaderValue = new Animated.Value(0);
-  const Header_Max_Height = 150;
-  const Header_Min_Height = 40;
+  const Header_Max_Height = 90;
+  const Header_Min_Height = 50;
  
   const animateHeaderHeight = AnimatedHeaderValue.interpolate({
     inputRange: [0, Header_Max_Height- Header_Min_Height],
@@ -215,6 +216,37 @@ const VehicleDt1Screen = ({ navigation }) => {
                     onChangeText={text => setEmail(text)}
                   />
 
+                      <Text style={styles.inputTitle1}>Please Upload vehicle license</Text>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between'
+
+                  
+                }}>
+                  <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+                      <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+
+                </View>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between'
+
+                  
+                }}>
+                  
+                  <Text style={styles.inputTitle2}>Front View</Text>    
+                  <Text style={styles.inputTitle2}>Back View</Text> 
+
+                </View>
+                      
                
                      
                     <Text style={styles.inputTitle}>VEHICLE INSURANCE NUMBER</Text>
@@ -225,6 +257,38 @@ const VehicleDt1Screen = ({ navigation }) => {
                     value={Did}
                     onChangeText={text => setDid(text)}
                   />
+
+                  
+          <Text style={styles.inputTitle1}>Please Upload vehicle insurance</Text>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between'
+
+                  
+                }}>
+                  <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+                      <View style={styles.profileimage}>
+                      <Image source={require('../assets/images/PhotoInput.png')} style={styles.profileimage} 
+                          />
+                      </View>
+
+                </View>
+                <View style={{
+                  flexDirection: 'row',
+                  padding: 10,
+                  justifyContent: 'space-between'
+
+                  
+                }}>
+                  
+                  <Text style={styles.inputTitle2}>Front View</Text>    
+                  <Text style={styles.inputTitle2}>Back View</Text> 
+
+                </View>
      
                  
                 </View>
@@ -272,13 +336,14 @@ const styles = StyleSheet.create({
       
   },
   footer: {
-      // flex: 1,
+      flex: 1,
       // height: "70%",
       backgroundColor: '#fff',
       // borderTopLeftRadius: 30,
       // borderTopRightRadius: 30,
       paddingHorizontal: 20,
-      paddingVertical: 30
+      paddingVertical: 30,
+      
   },
   Title: {
     justifyContent: 'center',
@@ -293,6 +358,14 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       width: "100%",
       justifyContent: 'space-between'
+  },
+  profileimage: {
+    width: 130,
+    height: 130,
+    borderRadius: 15,
+    overflow: "hidden",
+  
+  
   },
 
  
@@ -321,6 +394,18 @@ const styles = StyleSheet.create({
     ...FONTS.h3,
     fontWeight: 'bold',
     marginTop: SIZES.padding3
+  },
+  inputTitle1: {
+    
+    ...FONTS.h3,
+    marginTop: SIZES.padding3
+  },
+  inputTitle2: {
+    
+    ...FONTS.h4,
+    marginTop: -10,
+    marginHorizontal: 30  
+  
   },
   inputSubTitle: {
     

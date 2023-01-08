@@ -25,8 +25,12 @@ import {
    MyActivity, 
    SetDestiOnMap, 
    NoteToDriver,
-   SelectDriver, 
-   PendingDriver} from './screens';
+   SelectDriver,
+   DSetStartOnMap,
+   AcceptEmpReq,
+   PendingDriver,
+   DFinishRide,
+   DStartRide} from './screens';
 import Tabs from "./navigation/tabs";
 import DTabs from "./navigation/Dtabs";
 
@@ -65,11 +69,15 @@ const App = () => {
           {/* <Stack.Screen name="DriverDetails" component={DriverDetails} /> */}
           {/* <Stack.Screen name="DRSignUpScreen" component={DRSignUpScreen} /> */}
           {/* <Stack.Screen name="VehicleDt1Screen" component={VehicleDt1Screen} /> */}
-          {/* <Stack.Screen name="VehicleDt2Screen" component={VehicleDt2Screen} /> */}
+          <Stack.Screen name="VehicleDt2Screen" component={VehicleDt2Screen} />
           {/* <Stack.Screen name="RouteDetailsInput" component={RouteDetailsInput} /> */}
           {/* <Stack.Screen name="DLogin" component={DLoginScreen} /> */}
           {/* <Stack.Screen name="DOTP" component={DOTPScreen} /> */}
-          <Stack.Screen name="DHome" component={DTabs} />
+          {/* <Stack.Screen name="DHome" component={DTabs} /> */}
+          {/* <Stack.Screen name="DSetStartOnMap" component={DSetStartOnMap} />
+          <Stack.Screen name="DStartRide" component={DStartRide} />
+          <Stack.Screen name="AcceptEmpReq" component={AcceptEmpReq} /> 
+          <Stack.Screen name="DFinishRide" component={DFinishRide} /> */}
           
         
 

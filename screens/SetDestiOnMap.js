@@ -109,7 +109,7 @@ function renderMap() {
         <View style={styles.button}>
 
         <IconButton
-                    icon={icons.map}
+                    icon={icons.Search}
                     iconStyle={{
                       marginLeft:50,
                       marginTop: 10,

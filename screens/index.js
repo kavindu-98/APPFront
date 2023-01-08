@@ -26,6 +26,12 @@ import DLoginScreen from "./DLoginScreen";
 import DHomeScreen from "./DHomeScreen";
 import DOTPScreen from "./DOTPScreen";
 import DProfileScreen from "./DProfileScreen";
+import DStartLocation from "./DStartLocation";
+import DSetStartOnMap from "./DSetStartOnMap";
+import DStartRide from "./DStartRide";
+import AcceptEmpReq from "./AcceptEmpReq";
+import DFinishRide from "./DFinishRide";
+import DMyActivity from "./DMyActivity";
 
 
 
@@ -57,7 +63,13 @@ export {
     DLoginScreen,
     DOTPScreen,
     DHomeScreen,
-    DProfileScreen
+    DProfileScreen,
+    DStartLocation,
+    DSetStartOnMap,
+    DStartRide,
+    AcceptEmpReq,
+    DFinishRide,
+    DMyActivity,
 
     
 
